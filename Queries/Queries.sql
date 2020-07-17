@@ -118,7 +118,7 @@ ON (ce.emp_no = de.emp_no)
 INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
 
--- Joining retirement_info and dept_emp tables sales onlt
+-- Joining retirement_info and dept_emp tables sales only
 SELECT ri.emp_no,
 	ri.first_name,
     ri.last_name,

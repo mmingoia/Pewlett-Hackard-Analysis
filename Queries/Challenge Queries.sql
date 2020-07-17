@@ -43,6 +43,24 @@ ORDER BY emp_no;
 
 SELECT * FROM retiringbytitlenodups;
 
+--Create Count with number of titles retiring
+SELECT
+	COUNT (DISTINCT title)
+INTO Titlecount
+FROM retiringbytitlenodups;
+
+SELECT * FROM Titlecount;
+
+-- Create Summary Table with count of retiring employees by title
+SELECT
+	title,
+	COUNT (title)
+INTO TitleSummary
+FROM retiringbytitlenodups
+GROUP BY title;
+
+SELECT * FROM TitleSummary;
+
 -- Create Table of potential Mentors - Deliverable 2
 SELECT e.emp_no,
 	e.first_name,
